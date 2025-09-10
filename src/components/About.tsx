@@ -16,10 +16,43 @@ import {
   Heart,
   Zap
 } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const About = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.1 })
+  const { t } = useLanguage()
+
+  const stats = [
+    { 
+      icon: Home, 
+      number: '500+', 
+      label: t('about.stats.projects'),
+      color: 'from-blue-500 to-cyan-500',
+      bgGradient: 'from-blue-500/10 to-cyan-500/10'
+    },
+    { 
+      icon: Calendar, 
+      number: '25+', 
+      label: t('about.stats.experience'),
+      color: 'from-purple-500 to-pink-500',
+      bgGradient: 'from-purple-500/10 to-pink-500/10'
+    },
+    { 
+      icon: Users, 
+      number: '1000+', 
+      label: t('about.stats.clients'),
+      color: 'from-green-500 to-emerald-500',
+      bgGradient: 'from-green-500/10 to-emerald-500/10'
+    },
+    { 
+      icon: Award, 
+      number: '50+', 
+      label: t('about.stats.awards'),
+      color: 'from-orange-500 to-red-500',
+      bgGradient: 'from-orange-500/10 to-red-500/10'
+    }
+  ]
 
   // Helper functions for stat colors without gradients
   const getStatIconBg = (index: number) => {
@@ -54,37 +87,6 @@ const About = () => {
       y: 0
     }
   }
-
-  const stats = [
-    { 
-      icon: Home, 
-      number: '500+', 
-      label: 'Homes Built',
-      color: 'from-blue-500 to-cyan-500',
-      bgGradient: 'from-blue-500/10 to-cyan-500/10'
-    },
-    { 
-      icon: Calendar, 
-      number: '25+', 
-      label: 'Years Experience',
-      color: 'from-purple-500 to-pink-500',
-      bgGradient: 'from-purple-500/10 to-pink-500/10'
-    },
-    { 
-      icon: Users, 
-      number: '1000+', 
-      label: 'Happy Clients',
-      color: 'from-green-500 to-emerald-500',
-      bgGradient: 'from-green-500/10 to-emerald-500/10'
-    },
-    { 
-      icon: Award, 
-      number: '50+', 
-      label: 'Awards Won',
-      color: 'from-yellow-500 to-orange-500',
-      bgGradient: 'from-yellow-500/10 to-orange-500/10'
-    }
-  ]
 
   const features = [
     {
@@ -170,7 +172,7 @@ const About = () => {
               className="inline-block mb-4"
             >
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
-                About SHRI Home Builders
+                {t('about.title')}
               </div>
             </motion.div>
             <motion.h2 
@@ -178,7 +180,7 @@ const About = () => {
               className="text-5xl md:text-6xl font-bold mb-6"
             >
               <span className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 bg-clip-text text-transparent">
-                Building Dreams
+                {t('about.subtitle')}
               </span>
               <br />
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -189,8 +191,7 @@ const About = () => {
               variants={itemVariants}
               className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             >
-              With over two decades of excellence in home building, SHRI has established itself 
-              as Melbourne&apos;s premier luxury home builder, creating extraordinary homes that exceed expectations.
+              {t('about.description')}
             </motion.p>
           </motion.div>
 
@@ -240,20 +241,18 @@ const About = () => {
                 <motion.h3 
                   className="text-4xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-blue-900 bg-clip-text text-transparent"
                 >
-                  Your Vision, Our Expertise
+                  {t('about.visionTitle')}
                 </motion.h3>
                 <motion.p 
                   className="text-lg text-gray-600 leading-relaxed mb-8"
                 >
-                  At SHRI Home Builders, we believe that every home should be a reflection of its owner&apos;s 
-                  personality and lifestyle. Our team of expert architects, designers, and craftsmen work 
-                  together to bring your vision to life with unparalleled attention to detail.
+                  {t('about.detailedDescription')}
                 </motion.p>
               </div>
 
               {/* Enhanced Achievements */}
               <div className="space-y-4">
-                <h4 className="text-2xl font-bold text-gray-900 mb-6">Our Achievements</h4>
+                <h4 className="text-2xl font-bold text-gray-900 mb-6">{t('about.achievements.title')}</h4>
                 <div className="grid grid-cols-1 gap-3">
                   {achievements.map((achievement, index) => (
                     <motion.div
@@ -344,10 +343,10 @@ const About = () => {
           <motion.div variants={itemVariants} className="mb-16">
             <div className="text-center mb-12">
               <h3 className="text-4xl font-bold bg-gradient-to-r from-gray-900 to-blue-900 bg-clip-text text-transparent mb-4">
-                Why Choose SHRI?
+                {t('about.whyChooseTitle')}
               </h3>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Discover what sets us apart in the home building industry
+                {t('about.whyChooseSubtitle')}
               </p>
             </div>
             

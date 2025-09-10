@@ -3,10 +3,13 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Facebook, Instagram, Linkedin } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
+import LanguageSwitcher from './LanguageSwitcher'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const { t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,12 +20,12 @@ const Header = () => {
   }, [])
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'House Designs', href: '#designs' },
-    { name: 'Gallery', href: '#gallery' },
-    { name: 'Contact', href: '#contact' },
+    { name: t('nav.home'), href: '#home' },
+    { name: t('nav.about'), href: '#about' },
+    { name: t('nav.services'), href: '#services' },
+    { name: t('nav.designs'), href: '#designs' },
+    { name: t('nav.gallery'), href: '#gallery' },
+    { name: t('nav.contact'), href: '#contact' },
   ]
 
   return (
@@ -49,13 +52,13 @@ const Header = () => {
               <span className={scrolled ? 'text-gray-900' : 'text-white'}>HRI</span>
             </div>
             <div className={`ml-2 text-xs ${scrolled ? 'text-gray-600' : 'text-gray-300'} transition-colors duration-300`}>
-              <div className="font-semibold">HOME BUILDERS</div>
-              <div className="text-xs opacity-75">Melbourne&apos;s Finest</div>
+              <div className="font-semibold">{t('header.tagline')}</div>
+              <div className="text-xs opacity-75">{t('header.subtitle')}</div>
             </div>
           </motion.div>
 
           {/* Desktop Navigation with enhanced effects */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6">
             {navItems.map((item, index) => (
               <motion.a
                 key={item.name}
@@ -72,6 +75,10 @@ const Header = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
               </motion.a>
             ))}
+            
+            {/* Language Switcher */}
+            <LanguageSwitcher isScrolled={scrolled} />
+            
             <motion.button
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -83,7 +90,7 @@ const Header = () => {
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg"
             >
-              Get Quote
+              {t('nav.getQuote')}
             </motion.button>
           </div>
 
@@ -161,6 +168,18 @@ const Header = () => {
                     >
                       Get Quote
                     </motion.button>
+                  </div>
+                  
+                  {/* Mobile Language Switcher */}
+                  <div className="px-8 pt-4">
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.9 }}
+                      className="flex justify-center"
+                    >
+                      <LanguageSwitcher isScrolled={true} />
+                    </motion.div>
                   </div>
                   
                   {/* Mobile social links */}

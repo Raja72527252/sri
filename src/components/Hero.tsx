@@ -3,18 +3,20 @@
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import { ArrowRight, Play } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const Hero = () => {
   const [displayedText, setDisplayedText] = useState('')
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
+  const { t } = useLanguage()
   
   const changingTexts = [
-    'Transform your vision into reality with our expert craftsmanship',
-    'Building exceptional homes across Melbourne since 2010',
-    'Luxury custom homes designed for modern living',
-    'Quality construction with innovative design solutions',
-    'Your dream home awaits with premium building services'
+    t('hero.typewriter.1'),
+    t('hero.typewriter.2'),
+    t('hero.typewriter.3'),
+    t('hero.typewriter.4'),
+    t('hero.typewriter.5')
   ]
   const currentText = changingTexts[currentTextIndex]
   
@@ -101,7 +103,7 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
             >
-              MELBOURNE&apos;S PREMIUM HOME BUILDERS
+              {t('hero.title')}
             </motion.span>
           </motion.h1>
           
@@ -135,7 +137,7 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg flex items-center gap-3 transition-all duration-300 shadow-2xl"
             >
-              Start Your Journey
+              {t('hero.getStarted')}
               <motion.div
                 animate={{ x: [0, 5, 0] }}
                 transition={{ repeat: Infinity, duration: 1.5 }}
@@ -159,7 +161,7 @@ const Hero = () => {
               >
                 <Play className="w-4 h-4 ml-1" />
               </motion.div>
-              Watch Our Story
+              {t('hero.viewProjects')}
             </motion.button>
           </motion.div>
         </motion.div>

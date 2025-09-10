@@ -3,12 +3,14 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Play } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const SuccessStories = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
   })
+  const { t } = useLanguage()
 
   return (
     <section className="py-20 bg-white">
@@ -21,7 +23,7 @@ const SuccessStories = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Our Success Stories
+            {t('success.title')}
           </h2>
           <div className="w-24 h-1 bg-cyan-500 mx-auto mb-8"></div>
         </motion.div>
@@ -34,17 +36,10 @@ const SuccessStories = () => {
             transition={{ delay: 0.2, duration: 0.8 }}
           >
             <h3 className="text-3xl font-bold text-gray-900 mb-6">
-              Transforming Lives Through Quality Construction
+              {t('success.subtitle')}
             </h3>
             <p className="text-gray-600 text-lg leading-relaxed mb-6">
-              Every project tells a story of transformation, dreams realized, and 
-              families finding their perfect home. Our success is measured not just 
-              in buildings completed, but in the joy and satisfaction of our clients.
-            </p>
-            <p className="text-gray-600 text-lg leading-relaxed mb-8">
-              From young families buying their first home to executives seeking 
-              luxury properties, we&apos;ve helped hundreds of Melbourne residents 
-              create spaces they truly love.
+              {t('success.description')}
             </p>
             
             <div className="space-y-4">
@@ -139,10 +134,10 @@ const SuccessStories = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-16 border-t border-gray-200"
         >
           {[
-            { number: '500+', label: 'Homes Completed', suffix: '', bgColor: 'bg-blue-50', textColor: 'text-blue-600', borderColor: 'border-blue-200' },
-            { number: '15', label: 'Years Experience', suffix: '+', bgColor: 'bg-green-50', textColor: 'text-green-600', borderColor: 'border-green-200' },
-            { number: '50', label: 'Awards Won', suffix: '+', bgColor: 'bg-purple-50', textColor: 'text-purple-600', borderColor: 'border-purple-200' },
-            { number: '98', label: 'Client Satisfaction', suffix: '%', bgColor: 'bg-orange-50', textColor: 'text-orange-600', borderColor: 'border-orange-200' }
+            { number: '500+', label: t('success.stats.homes'), suffix: '', bgColor: 'bg-blue-50', textColor: 'text-blue-600', borderColor: 'border-blue-200' },
+            { number: '15', label: t('success.stats.years'), suffix: '+', bgColor: 'bg-green-50', textColor: 'text-green-600', borderColor: 'border-green-200' },
+            { number: '50', label: t('success.stats.awards'), suffix: '+', bgColor: 'bg-purple-50', textColor: 'text-purple-600', borderColor: 'border-purple-200' },
+            { number: '98', label: t('success.stats.satisfaction'), suffix: '%', bgColor: 'bg-orange-50', textColor: 'text-orange-600', borderColor: 'border-orange-200' }
           ].map((stat, index) => (
             <motion.div
               key={stat.label}

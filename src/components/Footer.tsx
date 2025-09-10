@@ -16,8 +16,11 @@ import {
   ArrowRight,
   ArrowUp
 } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const Footer = () => {
+  const { t } = useLanguage()
+  
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
@@ -42,12 +45,12 @@ const Footer = () => {
   }
 
   const quickLinks = [
-    { name: 'Home', href: '#home', icon: Home },
-    { name: 'About Us', href: '#about', icon: Users },
-    { name: 'Our Services', href: '#services', icon: Award },
-    { name: 'House Designs', href: '#designs', icon: Home },
+    { name: t('nav.home'), href: '#home', icon: Home },
+    { name: t('nav.about'), href: '#about', icon: Users },
+    { name: t('nav.services'), href: '#services', icon: Award },
+    { name: t('nav.designs'), href: '#designs', icon: Home },
     { name: 'Gallery', href: '#gallery', icon: Users },
-    { name: 'Contact Us', href: '#contact', icon: Phone }
+    { name: t('nav.contact'), href: '#contact', icon: Phone }
   ]
 
   const services = [
@@ -116,8 +119,8 @@ const Footer = () => {
                   <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">S</span>
                   <span className="text-white">HRI</span>
                 </h3>
-                <p className="text-gray-300 font-medium">HOME BUILDERS</p>
-                <p className="text-sm text-gray-400">Melbourne's Finest</p>
+                <p className="text-gray-300 font-medium">{t('header.tagline')}</p>
+                <p className="text-sm text-gray-400">{t('header.subtitle')}</p>
               </motion.div>
               
               <p className="text-gray-300 mb-6 leading-relaxed">
@@ -139,7 +142,7 @@ const Footer = () => {
                   className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 backdrop-blur-sm rounded-lg p-3 text-center"
                 >
                   <div className="text-2xl font-bold text-purple-400">25+</div>
-                  <div className="text-xs text-gray-300">Years Experience</div>
+                  <div className="text-xs text-gray-300">{t('success.stats.years')}</div>
                 </motion.div>
               </div>
 
@@ -284,16 +287,16 @@ const Footer = () => {
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
                 <h4 className="text-xl font-bold mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Stay Updated
+                  {t('footer.newsletter.title')}
                 </h4>
                 <p className="text-gray-300">
-                  Subscribe to our newsletter for the latest news and project updates.
+                  {t('footer.newsletter.description')}
                 </p>
               </div>
               <div className="flex gap-3 w-full md:w-auto">
                 <input
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder={t('contact.form.emailPlaceholder')}
                   className="flex-1 md:w-80 px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-white placeholder-gray-400 backdrop-blur-sm"
                 />
                 <motion.button
@@ -304,7 +307,7 @@ const Footer = () => {
                   whileTap={{ scale: 0.95 }}
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg"
                 >
-                  Subscribe
+                  {t('footer.newsletter.subscribe')}
                 </motion.button>
               </div>
             </div>
@@ -321,7 +324,7 @@ const Footer = () => {
           <div className="container mx-auto px-4 py-6">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <div className="text-gray-400 text-sm">
-                © 2024 SHRI Home Builders. All rights reserved.
+                {t('footer.copyright')}
               </div>
               <div className="flex items-center space-x-6">
                 <div className="flex space-x-6 text-sm">

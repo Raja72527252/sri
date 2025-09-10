@@ -3,29 +3,31 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const ContactInfo = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
   })
+  const { t } = useLanguage()
 
   const contactMethods = [
     {
       icon: Phone,
-      title: 'Call Us',
+      title: t('contact.phone'),
       info: '+61 3 9XXX XXXX',
       subInfo: 'Mon-Fri 8AM-6PM'
     },
     {
       icon: Mail,
-      title: 'Email Us',
+      title: t('contact.email'),
       info: 'info@shri.com.au',
       subInfo: 'Quick Response'
     },
     {
       icon: MapPin,
-      title: 'Visit Us',
+      title: t('contact.address'),
       info: '123 Collins Street, Melbourne',
       subInfo: 'VIC 3000'
     }
@@ -42,12 +44,11 @@ const ContactInfo = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Get Started on Your Home Building Journey Today
+            {t('contact.title')}
           </h2>
           <div className="w-24 h-1 bg-cyan-500 mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to turn your dream home into reality? Contact us today for a free 
-            consultation and discover how we can bring your vision to life.
+            {t('contact.subtitle')}
           </p>
         </motion.div>
 
@@ -60,7 +61,7 @@ const ContactInfo = () => {
             className="space-y-8"
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Get In Touch
+              {t('testimonials.getInTouch')}
             </h3>
             
             {contactMethods.map((method, index) => (
@@ -119,29 +120,29 @@ const ContactInfo = () => {
           >
             <div className="bg-gray-50 p-8 rounded-xl">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Send us a Message
+                {t('contact.form.title')}
               </h3>
               
               <form className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-gray-700 font-medium mb-2">
-                      First Name *
+                      {t('contact.form.firstName')}
                     </label>
                     <input
                       type="text"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all duration-300"
-                      placeholder="Enter your first name"
+                      placeholder={t('contact.form.firstNamePlaceholder')}
                     />
                   </div>
                   <div>
                     <label className="block text-gray-700 font-medium mb-2">
-                      Last Name *
+                      {t('contact.form.lastName')}
                     </label>
                     <input
                       type="text"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all duration-300"
-                      placeholder="Enter your last name"
+                      placeholder={t('contact.form.lastNamePlaceholder')}
                     />
                   </div>
                 </div>
@@ -149,48 +150,48 @@ const ContactInfo = () => {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-gray-700 font-medium mb-2">
-                      Email Address *
+                      {t('contact.form.email')}
                     </label>
                     <input
                       type="email"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all duration-300"
-                      placeholder="Enter your email"
+                      placeholder={t('contact.form.emailPlaceholder')}
                     />
                   </div>
                   <div>
                     <label className="block text-gray-700 font-medium mb-2">
-                      Phone Number
+                      {t('contact.form.phone')}
                     </label>
                     <input
                       type="tel"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all duration-300"
-                      placeholder="Enter your phone number"
+                      placeholder={t('contact.form.phonePlaceholder')}
                     />
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-gray-700 font-medium mb-2">
-                    Project Type
+                    {t('contact.form.projectType')}
                   </label>
                   <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all duration-300">
-                    <option>Select project type</option>
-                    <option>New Home Build</option>
-                    <option>Home Extension</option>
-                    <option>Renovation</option>
-                    <option>Commercial Project</option>
-                    <option>Other</option>
+                    <option>{t('contact.form.selectProject')}</option>
+                    <option>{t('contact.form.newHome')}</option>
+                    <option>{t('contact.form.extension')}</option>
+                    <option>{t('contact.form.renovation')}</option>
+                    <option>{t('contact.form.commercial')}</option>
+                    <option>{t('contact.form.other')}</option>
                   </select>
                 </div>
 
                 <div>
                   <label className="block text-gray-700 font-medium mb-2">
-                    Message *
+                    {t('contact.form.message')}
                   </label>
                   <textarea
                     rows={5}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all duration-300 resize-none"
-                    placeholder="Tell us about your project..."
+                    placeholder={t('contact.form.messagePlaceholder')}
                   ></textarea>
                 </div>
 
@@ -199,7 +200,7 @@ const ContactInfo = () => {
                   whileTap={{ scale: 0.98 }}
                   className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 transition-colors duration-300"
                 >
-                  Send Message
+                  {t('contact.form.sendMessage')}
                   <Send className="w-5 h-5" />
                 </motion.button>
               </form>

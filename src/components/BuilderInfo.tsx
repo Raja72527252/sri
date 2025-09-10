@@ -3,27 +3,29 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Award, Users, Home, Calendar, Trophy, CheckCircle, Star } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const BuilderInfo = () => {
+  const { t } = useLanguage()
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
   })
 
   const achievements = [
-    { icon: Home, number: '500+', label: 'Homes Built', color: 'from-blue-500 to-purple-600' },
-    { icon: Users, number: '15+', label: 'Years Experience', color: 'from-green-500 to-teal-600' },
-    { icon: Award, number: '50+', label: 'Awards Won', color: 'from-orange-500 to-red-600' },
-    { icon: Star, number: '98%', label: 'Client Satisfaction', color: 'from-yellow-500 to-orange-600' }
+    { icon: Home, number: '500+', label: t('about.stats.projects'), color: 'from-blue-500 to-purple-600' },
+    { icon: Users, number: '15+', label: t('about.stats.experience'), color: 'from-green-500 to-teal-600' },
+    { icon: Award, number: '50+', label: t('about.stats.awards'), color: 'from-orange-500 to-red-600' },
+    { icon: Star, number: '98%', label: t('success.stats.satisfaction'), color: 'from-yellow-500 to-orange-600' }
   ]
 
   const features = [
-    'Premium Quality Materials',
-    'Expert Craftsmanship',
-    'On-Time Delivery',
-    'Comprehensive Warranty',
-    'Transparent Pricing',
-    'Dedicated Project Manager'
+    t('builderInfo.features.premium'),
+    t('builderInfo.features.craftsmanship'),
+    t('builderInfo.features.delivery'),
+    t('builderInfo.features.warranty'),
+    t('builderInfo.features.pricing'),
+    t('builderInfo.features.manager')
   ]
 
   return (
@@ -44,14 +46,13 @@ const BuilderInfo = () => {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-slate-800 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-6">
-            Builders Melbourne -
+            {t('builderInfo.title')} -
             <br />
-            <span className="text-4xl md:text-6xl">Transforming Homes</span>
+            <span className="text-4xl md:text-6xl">{t('builderInfo.subtitle')}</span>
           </h2>
           <div className="w-32 h-1.5 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-8 rounded-full"></div>
           <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-            Experience the difference with Melbourne&apos;s most trusted home builders. 
-            We don&apos;t just build houses, we create dream homes that reflect your lifestyle and aspirations.
+            {t('builderInfo.description')}
           </p>
         </motion.div>
 
@@ -97,16 +98,14 @@ const BuilderInfo = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
           >
             <h3 className="text-4xl font-bold text-gray-900 mb-6">
-              Melbourne&apos;s Premier
+              {t('builderInfo.premier')}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block">
-                House Builders
+                {t('builderInfo.houseBuilders')}
               </span>
             </h3>
             
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              For over 15 years, SHRI has been at the forefront of Melbourne&apos;s construction industry, 
-              delivering exceptional homes that stand the test of time. Our commitment to quality, 
-              innovation, and client satisfaction has made us the preferred choice for discerning homeowners.
+              {t('builderInfo.companyDescription')}
             </p>
 
             <div className="grid md:grid-cols-2 gap-4 mb-8">

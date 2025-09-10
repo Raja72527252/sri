@@ -3,36 +3,38 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Home, Wrench, Palette, Shield, ArrowRight } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const Services = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
   })
+  const { t } = useLanguage()
 
   const services = [
     {
       icon: Home,
-      title: 'Custom Home Building',
-      description: 'From concept to completion, we build your dream home with precision and care.',
+      title: t('services.custom.title'),
+      description: t('services.custom.description'),
       features: ['Architectural Design', 'Site Preparation', 'Quality Construction', 'Final Inspection']
     },
     {
       icon: Wrench,
-      title: 'Renovations & Extensions',
-      description: 'Transform your existing space with our expert renovation and extension services.',
+      title: t('services.renovation.title'),
+      description: t('services.renovation.description'),
       features: ['Kitchen Renovations', 'Bathroom Upgrades', 'Home Extensions', 'Interior Design']
     },
     {
       icon: Palette,
-      title: 'Design Consultation',
-      description: 'Our expert designers help you create spaces that reflect your lifestyle and taste.',
+      title: t('services.consultation.title'),
+      description: t('services.consultation.description'),
       features: ['3D Visualization', 'Material Selection', 'Color Consultation', 'Space Planning']
     },
     {
       icon: Shield,
-      title: 'Project Management',
-      description: 'Comprehensive project management ensuring your build stays on time and budget.',
+      title: t('services.construction.title'),
+      description: t('services.construction.description'),
       features: ['Timeline Management', 'Budget Control', 'Quality Assurance', 'Regular Updates']
     }
   ]
@@ -48,12 +50,11 @@ const Services = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Our Services
+            {t('services.title')}
           </h2>
           <div className="w-24 h-1 bg-cyan-500 mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We offer comprehensive building services to bring your vision to life, 
-            from initial design to final completion.
+            {t('services.subtitle')}
           </p>
         </motion.div>
 
@@ -89,7 +90,7 @@ const Services = () => {
                 </ul>
                 
                 <button className="group-hover:bg-cyan-500 group-hover:text-white border border-cyan-500 text-cyan-500 px-6 py-2 rounded-full transition-all duration-300 flex items-center gap-2 mx-auto">
-                  Learn More
+                  {t('common.learnMore')}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
               </div>
@@ -106,17 +107,17 @@ const Services = () => {
         >
           <div className="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl p-8 md:p-12 text-white">
             <h3 className="text-3xl font-bold mb-4">
-              Ready to Start Your Project?
+              {t('services.readyToStart.title')}
             </h3>
             <p className="text-xl mb-8 opacity-90">
-              Let&apos;s discuss your vision and turn it into reality with our expert team.
+              {t('services.readyToStart.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-cyan-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300">
-                Get Free Consultation
+                {t('services.readyToStart.consultation')}
               </button>
               <button className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
-                View Portfolio
+                {t('services.readyToStart.portfolio')}
               </button>
             </div>
           </div>

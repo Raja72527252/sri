@@ -3,22 +3,24 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { ArrowRight, Check } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const CustomBuild = () => {
+  const { t } = useLanguage()
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
   })
 
   const features = [
-    'Architectural Design Services',
-    'Premium Material Selection',
-    'Custom Interior Design',
-    'Smart Home Integration',
-    'Energy Efficient Solutions',
-    'Luxury Finishes & Fixtures',
-    'Landscaping & Outdoor Spaces',
-    'Comprehensive Project Management'
+    t('customBuild.features.architectural'),
+    t('customBuild.features.materials'),
+    t('customBuild.features.interior'),
+    t('customBuild.features.smart'),
+    t('customBuild.features.energy'),
+    t('customBuild.features.luxury'),
+    t('customBuild.features.landscaping'),
+    t('customBuild.features.management')
   ]
 
   return (
@@ -33,22 +35,17 @@ const CustomBuild = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Build Your Dream Home With Custom
-              <span className="text-cyan-500"> Excellence</span>
+              {t('customBuild.title')}
+              <span className="text-cyan-500"> {t('customBuild.titleHighlight')}</span>
             </h2>
             <div className="w-24 h-1 bg-cyan-500 mb-8"></div>
             
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              Every family is unique, and so should be their home. Our custom home building 
-              service allows you to create a space that perfectly reflects your lifestyle, 
-              preferences, and dreams. From the initial concept to the final walkthrough, 
-              we&apos;re with you every step of the way.
+              {t('customBuild.description1')}
             </p>
 
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              With SHRI, you&apos;re not just getting a house – you&apos;re getting a home designed 
-              specifically for you, built with the highest quality materials and craftsmanship 
-              in Melbourne.
+              {t('customBuild.description2')}
             </p>
 
             {/* Features List */}
@@ -146,7 +143,7 @@ const CustomBuild = () => {
           className="mt-20"
         >
           <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
-            Your Custom Build Journey
+            {t('customBuild.journey.title')}
           </h3>
           
           <div className="grid md:grid-cols-4 gap-8">

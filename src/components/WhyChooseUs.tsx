@@ -3,8 +3,10 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Award, Shield, Clock, Users, Hammer, Star } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const WhyChooseUs = () => {
+  const { t } = useLanguage()
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
@@ -13,33 +15,33 @@ const WhyChooseUs = () => {
   const features = [
     {
       icon: Award,
-      title: 'Award-Winning Quality',
-      description: 'Recognized excellence in construction and design with multiple industry awards.'
+      title: t('whyChoose.quality.title'),
+      description: t('whyChoose.quality.description')
     },
     {
       icon: Shield,
-      title: 'Warranty Protection',
-      description: 'Comprehensive warranty coverage giving you peace of mind for years to come.'
+      title: t('whyChoose.warranty.title'),
+      description: t('whyChoose.warranty.description')
     },
     {
       icon: Clock,
-      title: 'On-Time Delivery',
-      description: 'Committed to delivering your project on schedule without compromising quality.'
+      title: t('whyChoose.delivery.title'),
+      description: t('whyChoose.delivery.description')
     },
     {
       icon: Users,
-      title: 'Expert Team',
-      description: 'Highly skilled craftsmen and designers with decades of combined experience.'
+      title: t('whyChoose.team.title'),
+      description: t('whyChoose.team.description')
     },
     {
       icon: Hammer,
-      title: 'Quality Materials',
-      description: 'Only the finest materials and fixtures sourced from trusted suppliers.'
+      title: t('whyChoose.materials.title'),
+      description: t('whyChoose.materials.description')
     },
     {
       icon: Star,
-      title: 'Customer Satisfaction',
-      description: '98% customer satisfaction rate with hundreds of happy homeowners.'
+      title: t('whyChoose.satisfaction.title'),
+      description: t('whyChoose.satisfaction.description')
     }
   ]
 
@@ -54,12 +56,11 @@ const WhyChooseUs = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Why Build With SHRI Homes?
+            {t('whyChoose.title')}
           </h2>
           <div className="w-24 h-1 bg-cyan-500 mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover what sets us apart as Melbourne&apos;s premier home builders. 
-            Our commitment to excellence shows in every detail.
+            {t('whyChoose.subtitle')}
           </p>
         </motion.div>
 
@@ -95,16 +96,16 @@ const WhyChooseUs = () => {
           className="mt-20"
         >
           <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
-            Our Building Process
+            {t('whyChoose.process.title')}
           </h3>
           
           <div className="grid md:grid-cols-5 gap-8">
             {[
-              { step: '01', title: 'Consultation', description: 'Initial meeting to discuss your vision' },
-              { step: '02', title: 'Design', description: 'Creating detailed plans and 3D models' },
-              { step: '03', title: 'Approval', description: 'Obtaining necessary permits and approvals' },
-              { step: '04', title: 'Construction', description: 'Building your home with precision' },
-              { step: '05', title: 'Handover', description: 'Final inspection and key handover' }
+              { step: '01', title: t('whyChoose.process.consultation'), description: t('whyChoose.process.consultationDesc') },
+              { step: '02', title: t('whyChoose.process.design'), description: t('whyChoose.process.designDesc') },
+              { step: '03', title: t('whyChoose.process.approval'), description: t('whyChoose.process.approvalDesc') },
+              { step: '04', title: t('whyChoose.process.construction'), description: t('whyChoose.process.constructionDesc') },
+              { step: '05', title: t('whyChoose.process.handover'), description: t('whyChoose.process.handoverDesc') }
             ].map((process, index) => (
               <motion.div
                 key={process.step}
@@ -137,17 +138,17 @@ const WhyChooseUs = () => {
         >
           <div className="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-gray-100">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Ready to Build Your Dream Home?
+              {t('whyChoose.readyToBuild.title')}
             </h3>
             <p className="text-xl text-gray-600 mb-8">
-              Join hundreds of satisfied homeowners who chose SHRI for their building journey.
+              {t('whyChoose.readyToBuild.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-full font-semibold transition-colors duration-300">
-                Start Your Project
+                {t('whyChoose.readyToBuild.contact')}
               </button>
               <button className="border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-full font-semibold transition-all duration-300">
-                Download Brochure
+                {t('whyChoose.readyToBuild.getQuote')}
               </button>
             </div>
           </div>

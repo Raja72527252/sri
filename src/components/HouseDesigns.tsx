@@ -3,12 +3,14 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { ArrowRight, Bed, Bath, Square, Car } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const HouseDesigns = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
   })
+  const { t } = useLanguage()
 
   const designs = [
     {
@@ -76,12 +78,11 @@ const HouseDesigns = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            House Designs
+            {t('designs.title')}
           </h2>
           <div className="w-24 h-1 bg-cyan-500 mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our collection of thoughtfully designed homes, each crafted to meet 
-            different lifestyle needs and preferences.
+            {t('designs.subtitle')}
           </p>
         </motion.div>
 
@@ -136,7 +137,7 @@ const HouseDesigns = () => {
                     {design.price}
                   </span>
                   <button className="text-cyan-500 hover:text-cyan-600 font-medium flex items-center gap-1 group-hover:gap-2 transition-all duration-300 text-sm">
-                    View Details
+                    {t('designs.viewDetails')}
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -162,10 +163,10 @@ const HouseDesigns = () => {
               Architectural Excellence
             </motion.div>
             <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Detailed Floor Plans
+              {t('designs.floorPlans')}
             </h3>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Explore our meticulously crafted floor plans designed for modern living
+              {t('designs.floorPlans.subtitle')}
             </p>
           </div>
           
@@ -253,7 +254,7 @@ const HouseDesigns = () => {
                     whileTap={{ scale: 0.98 }}
                     className="mt-2 w-full bg-gray-100 hover:bg-blue-50 text-gray-700 hover:text-blue-600 py-1.5 px-3 rounded-lg font-medium transition-all duration-300 text-xs"
                   >
-                    View Details
+                    {t('designs.viewDetails')}
                   </motion.button>
                 </div>
               </motion.div>
@@ -269,7 +270,7 @@ const HouseDesigns = () => {
               whileTap={{ scale: 0.95 }}
               className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-2xl font-semibold flex items-center gap-3 mx-auto transition-all duration-300 shadow-lg"
             >
-              Explore All Floor Plans
+              {t('designs.exploreAll')}
               <ArrowRight className="w-5 h-5" />
             </motion.button>
           </div>

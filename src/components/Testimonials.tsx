@@ -3,8 +3,10 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Star, Quote } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const Testimonials = () => {
+  const { t } = useLanguage()
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
@@ -55,12 +57,11 @@ const Testimonials = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            What Our Clients Say About Us
+            {t('testimonials.title')}
           </h2>
           <div className="w-24 h-1 bg-cyan-500 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Don&apos;t just take our word for it. Here&apos;s what our satisfied clients 
-            have to say about their experience building with SHRI.
+            {t('testimonials.subtitle')}
           </p>
         </motion.div>
 
@@ -140,10 +141,10 @@ const Testimonials = () => {
           <h3 className="text-2xl font-bold mb-8">Trusted by Melbourne Families</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { number: '500+', label: 'Happy Families' },
+              { number: '500+', label: t('success.stats.homes') },
               { number: '4.9/5', label: 'Average Rating' },
               { number: '98%', label: 'Would Recommend' },
-              { number: '15+', label: 'Years Experience' }
+              { number: '15+', label: t('success.stats.years') }
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
