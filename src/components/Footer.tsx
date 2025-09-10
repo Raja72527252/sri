@@ -172,7 +172,7 @@ const Footer = () => {
                 Quick Links
               </h4>
               <ul className="space-y-3">
-                {quickLinks.map((link, index) => (
+                {quickLinks.map((link) => (
                   <motion.li
                     key={link.name}
                     whileHover={{ x: 10 }}
