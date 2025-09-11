@@ -80,7 +80,7 @@ const HouseDesigns = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             {t('designs.title')}
           </h2>
-          <div className="w-24 h-1 bg-cyan-500 mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-amber-500 mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {t('designs.subtitle')}
           </p>
@@ -103,7 +103,7 @@ const HouseDesigns = () => {
                   className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute top-4 left-4 bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                <div className="absolute top-4 left-4 bg-amber-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                   {design.category}
                 </div>
               </div>
@@ -133,10 +133,10 @@ const HouseDesigns = () => {
                 </div>
                 
                 <div className="flex items-center justify-between">
-                  <span className="text-lg font-bold text-cyan-600">
+                  <span className="text-lg font-bold text-amber-600">
                     {design.price}
                   </span>
-                  <button className="text-cyan-500 hover:text-cyan-600 font-medium flex items-center gap-1 group-hover:gap-2 transition-all duration-300 text-sm">
+                  <button className="text-amber-500 hover:text-amber-600 font-medium flex items-center gap-1 group-hover:gap-2 transition-all duration-300 text-sm">
                     {t('designs.viewDetails')}
                     <ArrowRight className="w-4 h-4" />
                   </button>
@@ -158,7 +158,7 @@ const HouseDesigns = () => {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={inView ? { scale: 1, opacity: 1 } : {}}
               transition={{ delay: 0.7, duration: 0.6 }}
-              className="inline-block bg-blue-100 text-blue-800 px-6 py-2 rounded-full text-sm font-semibold mb-4"
+              className="inline-block bg-amber-100 text-amber-800 px-6 py-2 rounded-full text-sm font-semibold mb-4"
             >
               Architectural Excellence
             </motion.div>
@@ -211,7 +211,7 @@ const HouseDesigns = () => {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.8 + index * 0.1, duration: 0.6 }}
                 whileHover={{ y: -8 }}
-                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group border-2 border-gray-100 hover:border-blue-200"
+                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group border-2 border-gray-100 hover:border-amber-200"
               >
                 <div className="relative overflow-hidden border-b-2 border-gray-100 aspect-video">
                   <img 
@@ -225,7 +225,7 @@ const HouseDesigns = () => {
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
                   <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 border border-gray-200 shadow-sm">
-                    <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                     </svg>
@@ -233,7 +233,7 @@ const HouseDesigns = () => {
                 </div>
                 
                 <div className="p-3">
-                  <h4 className="text-base font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors duration-300">
+                  <h4 className="text-base font-bold text-gray-900 mb-1 group-hover:text-amber-600 transition-colors duration-300">
                     {plan.name}
                   </h4>
                   <p className="text-gray-600 mb-2 text-xs leading-tight">
@@ -243,7 +243,7 @@ const HouseDesigns = () => {
                   <div className="space-y-1 mb-2">
                     {plan.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center text-xs text-gray-700">
-                        <div className="w-1 h-1 bg-blue-500 rounded-full mr-2 flex-shrink-0"></div>
+                        <div className="w-1 h-1 bg-amber-500 rounded-full mr-2 flex-shrink-0"></div>
                         {feature}
                       </div>
                     ))}
@@ -252,7 +252,7 @@ const HouseDesigns = () => {
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="mt-2 w-full bg-gray-100 hover:bg-blue-50 text-gray-700 hover:text-blue-600 py-1.5 px-3 rounded-lg font-medium transition-all duration-300 text-xs"
+                    className="mt-2 w-full bg-gray-100 hover:bg-amber-50 text-gray-700 hover:text-amber-600 py-1.5 px-3 rounded-lg font-medium transition-all duration-300 text-xs"
                   >
                     {t('designs.viewDetails')}
                   </motion.button>
@@ -268,7 +268,7 @@ const HouseDesigns = () => {
               transition={{ delay: 1.2, duration: 0.8 }}
               whileHover={{ scale: 1.05, boxShadow: '0 10px 30px rgba(59, 130, 246, 0.3)' }}
               whileTap={{ scale: 0.95 }}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-2xl font-semibold flex items-center gap-3 mx-auto transition-all duration-300 shadow-lg"
+              className="bg-amber-600 hover:bg-amber-700 text-white px-10 py-4 rounded-2xl font-semibold flex items-center gap-3 mx-auto transition-all duration-300 shadow-lg"
             >
               {t('designs.exploreAll')}
               <ArrowRight className="w-5 h-5" />

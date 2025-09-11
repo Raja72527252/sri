@@ -18,7 +18,7 @@ const Testimonials = () => {
       name: 'Sarah & Mike Johnson',
       location: 'Brighton, Melbourne',
       rating: 5,
-      text: 'SHRI exceeded our expectations in every way. The attention to detail and quality of workmanship is outstanding. Our new home is everything we dreamed of and more.',
+      text: 'Mann Homes exceeded our expectations in every way. The attention to detail and quality of workmanship is outstanding. Our new home is everything we dreamed of and more.',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80'
     },
     {
@@ -26,7 +26,7 @@ const Testimonials = () => {
       name: 'David Chen',
       location: 'Richmond, Melbourne',
       rating: 5,
-      text: 'Professional, reliable, and delivered on time. The communication throughout the project was excellent. I would recommend SHRI to anyone looking to build their dream home.',
+      text: 'Professional, reliable, and delivered on time. The communication throughout the project was excellent. I would recommend Mann Homes to anyone looking to build their dream home.',
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80'
     },
     {
@@ -34,7 +34,7 @@ const Testimonials = () => {
       name: 'Emma Thompson',
       location: 'South Yarra, Melbourne',
       rating: 5,
-      text: 'From design to completion, SHRI made the entire process seamless. Their team is incredibly skilled and the final result is absolutely beautiful. Thank you for building our forever home!',
+      text: 'From design to completion, Mann Homes made the entire process seamless. Their team is incredibly skilled and the final result is absolutely beautiful. Thank you for building our forever home!',
       image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80'
     }
   ]
@@ -59,7 +59,7 @@ const Testimonials = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             {t('testimonials.title')}
           </h2>
-          <div className="w-24 h-1 bg-cyan-500 mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-amber-500 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             {t('testimonials.subtitle')}
           </p>
@@ -94,7 +94,7 @@ const Testimonials = () => {
               </div>
               
               <div className="relative">
-                <Quote className="absolute -top-2 -left-2 w-8 h-8 text-cyan-500 opacity-50" />
+                <Quote className="absolute -top-2 -left-2 w-8 h-8 text-amber-500 opacity-50" />
                 <p className="text-gray-200 leading-relaxed pl-6">
                   {testimonial.text}
                 </p>
@@ -110,10 +110,10 @@ const Testimonials = () => {
           transition={{ delay: 0.8, duration: 0.8 }}
           className="text-center max-w-4xl mx-auto"
         >
-          <div className="bg-gradient-to-r from-cyan-500/20 to-blue-600/20 backdrop-blur-sm p-12 rounded-2xl border border-cyan-500/30">
-            <Quote className="w-16 h-16 text-cyan-400 mx-auto mb-6" />
+          <div className="bg-gradient-to-r from-amber-500/20 to-orange-600/20 backdrop-blur-sm p-12 rounded-2xl border border-amber-500/30">
+            <Quote className="w-16 h-16 text-amber-400 mx-auto mb-6" />
             <blockquote className="text-2xl md:text-3xl font-light italic mb-8 leading-relaxed">
-              &quot;Building with SHRI was the best decision we made. They turned our vision 
+              &quot;Building with Mann Homes was the best decision we made. They turned our vision 
               into a reality that exceeded all our expectations. The quality, attention to 
               detail, and professionalism is unmatched.&quot;
             </blockquote>
@@ -125,7 +125,7 @@ const Testimonials = () => {
               />
               <div className="text-left">
                 <div className="font-semibold text-white text-lg">Michael & Lisa Rodriguez</div>
-                <div className="text-cyan-400">Malvern, Melbourne</div>
+                <div className="text-amber-400">Malvern, Melbourne</div>
               </div>
             </div>
           </div>
@@ -153,7 +153,7 @@ const Testimonials = () => {
                 transition={{ delay: 1.2 + index * 0.1, duration: 0.6 }}
                 className="text-center"
               >
-                <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.number}</div>
+                <div className="text-3xl font-bold text-amber-400 mb-2">{stat.number}</div>
                 <div className="text-gray-300">{stat.label}</div>
               </motion.div>
             ))}

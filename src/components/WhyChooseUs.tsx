@@ -58,7 +58,7 @@ const WhyChooseUs = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             {t('whyChoose.title')}
           </h2>
-          <div className="w-24 h-1 bg-cyan-500 mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-amber-500 mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {t('whyChoose.subtitle')}
           </p>
@@ -73,7 +73,7 @@ const WhyChooseUs = () => {
               transition={{ delay: index * 0.1, duration: 0.8 }}
               className="group bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-100 text-cyan-600 rounded-full mb-6 group-hover:bg-cyan-500 group-hover:text-white transition-colors duration-300">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-amber-100 text-amber-600 rounded-full mb-6 group-hover:bg-amber-500 group-hover:text-white transition-colors duration-300">
                 <feature.icon className="w-8 h-8" />
               </div>
               
@@ -114,7 +114,7 @@ const WhyChooseUs = () => {
                 transition={{ delay: 1 + index * 0.1, duration: 0.6 }}
                 className="text-center relative"
               >
-                <div className="w-16 h-16 bg-cyan-500 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                <div className="w-16 h-16 bg-amber-500 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                   {process.step}
                 </div>
                 <h4 className="font-semibold text-gray-900 mb-2">{process.title}</h4>
@@ -144,10 +144,10 @@ const WhyChooseUs = () => {
               {t('whyChoose.readyToBuild.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-full font-semibold transition-colors duration-300">
+              <button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full font-semibold transition-colors duration-300">
                 {t('whyChoose.readyToBuild.contact')}
               </button>
-              <button className="border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-full font-semibold transition-all duration-300">
+              <button className="border-2 border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-white px-8 py-3 rounded-full font-semibold transition-all duration-300">
                 {t('whyChoose.readyToBuild.getQuote')}
               </button>
             </div>

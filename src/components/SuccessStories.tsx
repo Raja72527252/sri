@@ -25,7 +25,7 @@ const SuccessStories = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             {t('success.title')}
           </h2>
-          <div className="w-24 h-1 bg-cyan-500 mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-amber-500 mx-auto mb-8"></div>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -44,8 +44,8 @@ const SuccessStories = () => {
             
             <div className="space-y-4">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center">
-                  <span className="text-cyan-600 font-bold">1</span>
+                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
+                  <span className="text-amber-600 font-bold">1</span>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Initial Consultation</h4>
@@ -54,8 +54,8 @@ const SuccessStories = () => {
               </div>
               
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center">
-                  <span className="text-cyan-600 font-bold">2</span>
+                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
+                  <span className="text-amber-600 font-bold">2</span>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Design & Planning</h4>
@@ -64,8 +64,8 @@ const SuccessStories = () => {
               </div>
               
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center">
-                  <span className="text-cyan-600 font-bold">3</span>
+                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
+                  <span className="text-amber-600 font-bold">3</span>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Quality Construction</h4>
@@ -94,7 +94,7 @@ const SuccessStories = () => {
                   whileTap={{ scale: 0.95 }}
                   className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow duration-300"
                 >
-                  <Play className="w-8 h-8 text-cyan-500 ml-1" />
+                  <Play className="w-8 h-8 text-amber-500 ml-1" />
                 </motion.button>
               </div>
             </div>
@@ -107,7 +107,7 @@ const SuccessStories = () => {
               className="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-xl"
             >
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-500 mb-1">500+</div>
+                <div className="text-3xl font-bold text-amber-500 mb-1">500+</div>
                 <div className="text-gray-600 text-sm">Happy Families</div>
               </div>
             </motion.div>
@@ -119,7 +119,7 @@ const SuccessStories = () => {
               className="absolute -top-6 -right-6 bg-white p-6 rounded-lg shadow-xl"
             >
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-500 mb-1">98%</div>
+                <div className="text-3xl font-bold text-amber-500 mb-1">98%</div>
                 <div className="text-gray-600 text-sm">Satisfaction Rate</div>
               </div>
             </motion.div>
@@ -134,7 +134,7 @@ const SuccessStories = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-16 border-t border-gray-200"
         >
           {[
-            { number: '500+', label: t('success.stats.homes'), suffix: '', bgColor: 'bg-blue-50', textColor: 'text-blue-600', borderColor: 'border-blue-200' },
+            { number: '500+', label: t('success.stats.homes'), suffix: '', bgColor: 'bg-amber-50', textColor: 'text-amber-600', borderColor: 'border-amber-200' },
             { number: '15', label: t('success.stats.years'), suffix: '+', bgColor: 'bg-green-50', textColor: 'text-green-600', borderColor: 'border-green-200' },
             { number: '50', label: t('success.stats.awards'), suffix: '+', bgColor: 'bg-purple-50', textColor: 'text-purple-600', borderColor: 'border-purple-200' },
             { number: '98', label: t('success.stats.satisfaction'), suffix: '%', bgColor: 'bg-orange-50', textColor: 'text-orange-600', borderColor: 'border-orange-200' }

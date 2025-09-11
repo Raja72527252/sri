@@ -67,7 +67,7 @@ const Hero = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-gradient-to-br from-blue-500/20 to-purple-600/20 blur-3xl"
+          className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-gradient-to-br from-amber-500/20 to-orange-600/20 blur-3xl"
         />
         <motion.div
           animate={{
@@ -79,7 +79,7 @@ const Hero = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-600/20 blur-3xl"
+          className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-gradient-to-br from-amber-500/20 to-orange-600/20 blur-3xl"
         />
       </div>
       
@@ -98,7 +98,7 @@ const Hero = () => {
             className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight"
           >
             <motion.span 
-              className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
+              className="block bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
@@ -118,7 +118,7 @@ const Hero = () => {
               <motion.span
                 animate={{ opacity: [1, 0, 1] }}
                 transition={{ duration: 1, repeat: Infinity }}
-                className="inline-block w-0.5 h-6 bg-gradient-to-b from-blue-400 to-purple-400 ml-1"
+                className="inline-block w-0.5 h-6 bg-gradient-to-b from-amber-400 to-orange-400 ml-1"
               />
             </span>
           </motion.div>
@@ -132,10 +132,10 @@ const Hero = () => {
             <motion.button
               whileHover={{ 
                 scale: 1.05, 
-                boxShadow: '0 25px 50px rgba(59, 130, 246, 0.4)' 
+                boxShadow: '0 25px 50px rgba(217, 119, 6, 0.4)' 
               }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg flex items-center gap-3 transition-all duration-300 shadow-2xl"
+              className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg flex items-center gap-3 transition-all duration-300 shadow-2xl"
             >
               {t('hero.getStarted')}
               <motion.div
@@ -182,7 +182,7 @@ const Hero = () => {
           <motion.div
             animate={{ y: [0, 20, 0], opacity: [1, 0.3, 1] }}
             transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
-            className="w-1.5 h-4 bg-gradient-to-b from-white to-cyan-300 rounded-full mt-3"
+            className="w-1.5 h-4 bg-gradient-to-b from-white to-amber-300 rounded-full mt-3"
           />
         </motion.div>
         <motion.p

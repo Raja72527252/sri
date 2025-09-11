@@ -47,13 +47,9 @@ const Header = () => {
             transition={{ delay: 0.2 }}
             className="flex items-center"
           >
-            <div className={`text-3xl font-bold ${scrolled ? 'text-gray-900' : 'text-white'} transition-colors duration-300`}>
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">S</span>
-              <span className={scrolled ? 'text-gray-900' : 'text-white'}>HRI</span>
-            </div>
-            <div className={`ml-2 text-xs ${scrolled ? 'text-gray-600' : 'text-gray-300'} transition-colors duration-300`}>
-              <div className="font-semibold">{t('header.tagline')}</div>
-              <div className="text-xs opacity-75">{t('header.subtitle')}</div>
+            <div className={`text-4xl font-bold ${scrolled ? 'text-gray-900' : 'text-white'} transition-colors duration-300`}>
+              <span className="bg-gradient-to-r from-amber-500 to-orange-600 bg-clip-text text-transparent">MANN</span>
+              <span className={`ml-2 text-2xl font-light ${scrolled ? 'text-gray-700' : 'text-gray-200'}`}>HOMES</span>
             </div>
           </motion.div>
 
@@ -67,12 +63,12 @@ const Header = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * index }}
                 whileHover={{ scale: 1.05, y: -2 }}
-                className={`font-semibold hover:text-blue-600 transition-all duration-300 relative group ${
+                className={`font-semibold hover:text-amber-600 transition-all duration-300 relative group ${
                   scrolled ? 'text-gray-800' : 'text-white'
                 }`}
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-500 to-orange-600 group-hover:w-full transition-all duration-300"></span>
               </motion.a>
             ))}
             
@@ -85,10 +81,10 @@ const Header = () => {
               transition={{ delay: 0.6 }}
               whileHover={{ 
                 scale: 1.05, 
-                boxShadow: '0 10px 30px rgba(59, 130, 246, 0.3)' 
+                boxShadow: '0 10px 30px rgba(217, 119, 6, 0.3)' 
               }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg"
+              className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 shadow-lg"
             >
               {t('nav.getQuote')}
             </motion.button>
@@ -151,7 +147,7 @@ const Header = () => {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.1 }}
                       whileHover={{ scale: 1.02, x: 10 }}
-                      className="block px-8 py-3 text-gray-800 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 font-medium"
+                      className="block px-8 py-3 text-gray-800 hover:text-amber-600 hover:bg-amber-50 transition-all duration-300 font-medium"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}
@@ -164,7 +160,7 @@ const Header = () => {
                       transition={{ delay: 0.8 }}
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-full font-semibold transition-all duration-300 shadow-lg"
+                      className="w-full bg-gradient-to-r from-amber-600 to-orange-600 text-white py-3 rounded-full font-semibold transition-all duration-300 shadow-lg"
                     >
                       Get Quote
                     </motion.button>
@@ -194,7 +190,7 @@ const Header = () => {
                           transition={{ delay: 1 + index * 0.1 }}
                           whileHover={{ scale: 1.2, rotate: 5 }}
                           whileTap={{ scale: 0.9 }}
-                          className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white shadow-lg"
+                          className="w-10 h-10 bg-gradient-to-r from-amber-600 to-orange-600 rounded-full flex items-center justify-center text-white shadow-lg"
                         >
                           <Icon className="w-5 h-5" />
                         </motion.a>

@@ -16,20 +16,20 @@ const ContactInfo = () => {
     {
       icon: Phone,
       title: t('contact.phone'),
-      info: '+61 3 9XXX XXXX',
+      info: '+61 0434 055 559',
       subInfo: 'Mon-Fri 8AM-6PM'
     },
     {
       icon: Mail,
       title: t('contact.email'),
-      info: 'info@shri.com.au',
+      info: 'info@mannhomes.com.au',
       subInfo: 'Quick Response'
     },
     {
       icon: MapPin,
       title: t('contact.address'),
-      info: '123 Collins Street, Melbourne',
-      subInfo: 'VIC 3000'
+      info: 'PO Box 2034, Melton South',
+      subInfo: 'VIC 3338'
     }
   ]
 
@@ -46,7 +46,7 @@ const ContactInfo = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             {t('contact.title')}
           </h2>
-          <div className="w-24 h-1 bg-cyan-500 mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-amber-500 mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {t('contact.subtitle')}
           </p>
@@ -72,7 +72,7 @@ const ContactInfo = () => {
                 transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
                 className="flex items-start gap-4 p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300"
               >
-                <div className="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center text-white">
+                <div className="w-12 h-12 bg-amber-500 rounded-full flex items-center justify-center text-white">
                   <method.icon className="w-6 h-6" />
                 </div>
                 <div>
@@ -88,7 +88,7 @@ const ContactInfo = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.8, duration: 0.6 }}
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 p-6 rounded-lg text-white"
+              className="bg-gradient-to-r from-amber-500 to-orange-600 p-6 rounded-lg text-white"
             >
               <div className="flex items-center gap-3 mb-4">
                 <Clock className="w-6 h-6" />
@@ -131,7 +131,7 @@ const ContactInfo = () => {
                     </label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all duration-300"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all duration-300"
                       placeholder={t('contact.form.firstNamePlaceholder')}
                     />
                   </div>
@@ -141,7 +141,7 @@ const ContactInfo = () => {
                     </label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all duration-300"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all duration-300"
                       placeholder={t('contact.form.lastNamePlaceholder')}
                     />
                   </div>
@@ -154,7 +154,7 @@ const ContactInfo = () => {
                     </label>
                     <input
                       type="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all duration-300"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all duration-300"
                       placeholder={t('contact.form.emailPlaceholder')}
                     />
                   </div>
@@ -164,7 +164,7 @@ const ContactInfo = () => {
                     </label>
                     <input
                       type="tel"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all duration-300"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all duration-300"
                       placeholder={t('contact.form.phonePlaceholder')}
                     />
                   </div>
@@ -174,7 +174,7 @@ const ContactInfo = () => {
                   <label className="block text-gray-700 font-medium mb-2">
                     {t('contact.form.projectType')}
                   </label>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all duration-300">
+                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all duration-300">
                     <option>{t('contact.form.selectProject')}</option>
                     <option>{t('contact.form.newHome')}</option>
                     <option>{t('contact.form.extension')}</option>
@@ -190,7 +190,7 @@ const ContactInfo = () => {
                   </label>
                   <textarea
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all duration-300 resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition-all duration-300 resize-none"
                     placeholder={t('contact.form.messagePlaceholder')}
                   ></textarea>
                 </div>
@@ -198,7 +198,7 @@ const ContactInfo = () => {
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 transition-colors duration-300"
+                  className="w-full bg-amber-500 hover:bg-amber-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 transition-colors duration-300"
                 >
                   {t('contact.form.sendMessage')}
                   <Send className="w-5 h-5" />
@@ -217,8 +217,8 @@ const ContactInfo = () => {
         >
           {[
             {
-              title: 'Melbourne Office',
-              address: '123 Collins Street, Melbourne VIC 3000',
+              title: 'Mann Homes Office',
+              address: 'PO Box 2034, Melton South VIC 3338',
               image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'
             },
             {

@@ -28,15 +28,15 @@ const About = () => {
       icon: Home, 
       number: '500+', 
       label: t('about.stats.projects'),
-      color: 'from-blue-500 to-cyan-500',
-      bgGradient: 'from-blue-500/10 to-cyan-500/10'
+      color: 'from-amber-500 to-orange-500',
+      bgGradient: 'from-amber-500/10 to-orange-500/10'
     },
     { 
       icon: Calendar, 
       number: '25+', 
       label: t('about.stats.experience'),
-      color: 'from-purple-500 to-pink-500',
-      bgGradient: 'from-purple-500/10 to-pink-500/10'
+      color: 'from-blue-700 to-indigo-700',
+      bgGradient: 'from-blue-700/10 to-indigo-700/10'
     },
     { 
       icon: Users, 
@@ -93,7 +93,7 @@ const About = () => {
       icon: Shield,
       title: 'Quality Assurance',
       description: 'Every project undergoes rigorous quality checks at each stage',
-      gradient: 'from-blue-600 to-purple-600'
+      gradient: 'from-amber-600 to-orange-600'
     },
     {
       icon: Clock,
@@ -139,7 +139,7 @@ const About = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-3xl"
+          className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-r from-amber-400/20 to-orange-400/20 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
@@ -152,7 +152,7 @@ const About = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-r from-cyan-400/20 to-green-400/20 rounded-full blur-3xl"
+          className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-r from-yellow-400/20 to-amber-400/20 rounded-full blur-3xl"
         />
       </div>
 
@@ -171,7 +171,7 @@ const About = () => {
               transition={{ duration: 0.6 }}
               className="inline-block mb-4"
             >
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
+              <div className="bg-gradient-to-r from-amber-600 to-orange-600 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
                 {t('about.title')}
               </div>
             </motion.div>
@@ -183,7 +183,7 @@ const About = () => {
                 {t('about.subtitle')}
               </span>
               <br />
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
                 Since 1999
               </span>
             </motion.h2>

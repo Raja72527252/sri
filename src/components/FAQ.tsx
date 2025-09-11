@@ -67,7 +67,7 @@ const FAQ = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             {t('faq.title')}
           </h2>
-          <div className="w-24 h-1 bg-cyan-500 mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-amber-500 mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {t('faq.subtitle')}
           </p>
@@ -94,7 +94,7 @@ const FAQ = () => {
                     </span>
                     <div className="flex-shrink-0">
                       {openItems.includes(index) ? (
-                        <Minus className="w-5 h-5 text-cyan-500" />
+                        <Minus className="w-5 h-5 text-amber-500" />
                       ) : (
                         <Plus className="w-5 h-5 text-gray-400" />
                       )}
@@ -143,7 +143,7 @@ const FAQ = () => {
                       </span>
                       <div className="flex-shrink-0">
                         {openItems.includes(actualIndex) ? (
-                          <Minus className="w-5 h-5 text-cyan-500" />
+                          <Minus className="w-5 h-5 text-amber-500" />
                         ) : (
                           <Plus className="w-5 h-5 text-gray-400" />
                         )}
@@ -180,7 +180,7 @@ const FAQ = () => {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="text-center mt-16"
           >
-            <div className="bg-gradient-to-r from-cyan-500 to-blue-600 p-8 md:p-12 rounded-2xl text-white">
+            <div className="bg-gradient-to-r from-amber-500 to-orange-600 p-8 md:p-12 rounded-2xl text-white">
               <h3 className="text-3xl font-bold mb-4">
                 {t('faq.stillHaveQuestions')}
               </h3>

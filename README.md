@@ -1,10 +1,10 @@
-# SHRI Home Builders - Modern Website
+# Mann Home Builders - Modern Website
 
-A stunning, responsive website for SHRI Home Builders built with Next.js, featuring beautiful animations and modern design that perfectly matches professional home building company standards.
+A stunning, responsive website for Mann Home Builders built with Next.js, featuring beautiful animations and modern design that perfectly matches professional home building company standards.
 
-## 🏠 About SHRI
+## 🏠 About Mann Homes
 
-SHRI is Melbourne's premier home builder, specializing in custom homes, renovations, and exceptional craftsmanship. This website showcases their services, portfolio, and client success stories with a modern, animated user interface.
+Mann Homes is Melbourne's premier home builder, specializing in custom homes, renovations, and exceptional craftsmanship. This website showcases their services, portfolio, and client success stories with a modern, animated user interface.
 
 ## ✨ Features
 
@@ -87,11 +87,11 @@ npm run build
 
 ## 📄 License
 
-This project is created for SHRI Home Builders. All rights reserved.
+This project is created for Mann Home Builders. All rights reserved.
 
-## 🤝 Contributing
+---
 
-This is a custom project for SHRI Home Builders. For any modifications or updates, please contact the development team.
+This is a custom project for Mann Home Builders. For any modifications or updates, please contact the development team.
 
 ---
 
